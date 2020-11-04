@@ -1,0 +1,19 @@
+<%# CSS・・・assets/stylesheets/shared/header.css %>
+<header class='top-page-header'>
+  <div class='top-page-contents'>
+    <%= link_to image_tag("schedule.png", class:"schedule-icon"), "/" %>
+    <h1 class='schedule-name'>スケジュール管理帳</h1>
+  </div>
+  <div class='nav'>
+    <ul class='lists'>
+      <%# <% if user_signed_in? %>
+        <%# <li><%= link_to current_user.name, edit_user_path(current_user), class: "user-name" </li> %>
+        <%# <li><%= link_to 'グループ一覧', "#", class: "group" </li> %>
+        <%# <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" </li> %>
+      <%# <% else %>
+        <li><%= link_to 'ログイン', "#", class: "login" %></li>
+        <li><%= link_to '新規登録', "#", class: "sign-up" %></li>
+      <%# <% end %>
+    </ul>
+  </div>
+</header>
