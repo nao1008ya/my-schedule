@@ -15,6 +15,6 @@ class EventsController < ApplicationController
   private
 
   def event_parameter
-    params.require(:event).permit(:title, :content, :start_time)
+    params.require(:event).permit(:title, :content, :start_time).merge(user_id: current_user.id)
   end
 end
