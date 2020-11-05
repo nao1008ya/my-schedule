@@ -1,25 +1,41 @@
-<h1>テスト</h1>
 
-<%= form_with(model: @event, local: true) do |form| %>
-
-  <div class="title">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+<div class='schedule-page' id='schedule-page'>
+  <div class='schedule-page__inner clearfix'>
+    <div class='schedule-page__inner--left schedule-page__header'>
+      <h2>スケジュール登録</h2>
+      <h5>スケジュール登録が可能です。</h5>
+      <%= link_to "スケジュールに戻る", root_path, class: 'btn'%>
+    </div>
+    <div class='schedule-page__inner--right form'>
+      <%= form_with(model: @event, local: true) do |f| %>
+        <div class='field'>
+          <div class='field-label'>
+            <%= f.label 'タイトル'%>
+          </div>
+          <div class='field-input'>
+            <%= f.text_field :title, autofocus: true%>
+          </div>
+        </div>
+        <div class='field'>
+          <div class='field-label'>
+            <%= f.label 'スタート時刻'%>
+          </div>
+          <div class='field-start'>
+            <%= f.datetime_select :start_time%>
+          </div>
+        </div>
+        <div class='field'>
+          <div class='field-label'>
+            <%= f.label '詳細'%>
+          </div>
+          <div class='field-input'>
+            <%= f.text_field :content, autofocus: true%>
+          </div>
+        </div>
+        <div class='actions'>
+          <%= f.submit "登録", class: 'btn'%>
+        </div>
+      <% end %>
+    </div>
   </div>
-
-    <div class="time">
-    <%= form.label :start_time %>
-    <%= form.datetime_select :start_time %>
-  </div>
-
-  <div class="content">
-    <%= form.label :content %>
-    <%= form.text_field :content %>
-  </div>
-
-
-  <div class="submit">
-    <%= form.submit %>
-  </div>
-
-<% end %>
+</div>
