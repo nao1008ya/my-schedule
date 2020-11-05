@@ -12,6 +12,7 @@
         <div class='field'>
           <div class='field-label'>
             <%= f.label '名前'%>
+            <span class="indispensable">必須</span>
           </div>
           <div class='field-input'>
             <%= f.text_field :name, autofocus: true%>
@@ -20,6 +21,7 @@
         <div class='field'>
           <div class='field-label'>
             <%= f.label 'メールアドレス'%>
+            <span class="indispensable">必須</span>
           </div>
           <div class='field-input'>
             <%= f.email_field :email%>
@@ -29,6 +31,7 @@
           <div class='field-label'>
             <%= f.label 'パスワード'%>
             <i>(英数字6文字以上)</i>
+            <span class="indispensable">必須</span>
           </div>
           <div class='field-input'>
             <%= f.password_field :password, autocomplete: "off"%>
@@ -37,6 +40,7 @@
         <div class='field'>
           <div class='field-label'>
             <%= f.label 'パスワード（確認用）'%>
+            <span class="indispensable">必須</span>
           </div>
           <div class='field-input'>
             <%= f.password_field :password_confirmation, autocomplete: "off"%>

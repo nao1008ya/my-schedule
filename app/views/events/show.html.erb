@@ -1,0 +1,39 @@
+
+  <div class="event__wrapper">
+    <div class="event__body">
+      <div class="event__detail">
+        <p class="detail__title">タイトル</p>
+        <h2 class="detail__message">
+          <%= @event.title %>
+        </h2>
+      </div>
+    </div>
+    <% if user_signed_in? && current_user.id == @event.user_id %>
+      <div class="event__manage">
+        <%= link_to "編集する", edit_event_path(@event.id), class: :event__btn %>
+        <%= link_to "削除する", event_path(@event.id), method: :delete, class: :event__btn %>
+        <%= link_to "スケジュールに戻る", root_path, class: :event__btn %>
+      </div>
+    <% end %>
+    
+    <div class="event__body">
+        <div class="event__detail">
+        <p class="detail__title">ユーザー名</p>
+        <p class="detail__message">
+          <%= @event.user.name %>
+        </p>
+      </div>
+      <div class="event__detail">
+        <p class="detail__title">スタート時刻</p>
+        <p class="detail__message">
+          <%= @event.start_time %>
+        </p>
+      </div>
+      <div class="event__detail">
+        <p class="detail__title">詳細</p>
+        <p class="detail__message">
+          <%= @event.content %>
+        </p>
+      </div>
+    </div>
+  </div>

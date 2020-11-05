@@ -42,7 +42,7 @@
 }
 
 
-.user-name {
+.header__list {
   text-decoration: none;
   margin-right: 3vw;
   color: #333333;
@@ -52,38 +52,7 @@
   border-radius: 5px;
 }
 
-.group {
-  text-decoration: none;
-  margin-right: 3vw;
-  color: #333333;
-  padding: 15px;
-  border: #333333 solid 2px;
-  border-radius: 5px;
-}
-
-
-.logout {
-  text-decoration: none;
-  color: #333333;
-  padding: 15px;
-  border: #333333 solid 2px;
-  border-radius: 5px;
-}
-
-.login {
-  text-decoration: none;
-  line-height: 32px;
-  margin-right: 3vw;
-  color: #333333;
-  padding: 15px;
-  border: #333333 solid 2px;
-  border-radius: 5px;
-}
-
-.sign-up {
-  text-decoration: none;
-  color: #333333;
-  padding: 15px;
-  border: #333333 solid 2px;
-  border-radius: 5px;
+.header__list:hover{
+  color: #fff;
+  background: #999;
 }
