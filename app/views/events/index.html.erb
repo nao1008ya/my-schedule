@@ -3,9 +3,13 @@
 <%= month_calendar events: @events do |date, events| %>
   <%= date.day %>
   <% events.each do |event| %>
-    <div>
-      <%= link_to event.title, event_path(event.id), class: :schedule__title %>
-    </div>
+    <% if user_signed_in? %>
+      <% if current_user.id == event.user_id %>
+      <div>
+        <%= link_to event.title, event_path(event.id), class: :schedule__title %>
+      </div>
+      <% end %>
+    <% end %>
   <% end %>
 <% end %>
 
