@@ -4,7 +4,7 @@
 
 .top-page-header {
   width: 100vw;
-  padding: 2vh 15vw;
+  padding: 2vh 1vw;
   display: flex;
   flex-direction: column;
   border: #333333 solid 2px;
@@ -47,7 +47,7 @@
   margin-right: 3vw;
   color: #333333;
   font-weight: bold;
-  padding: 15px;
+  padding: 10px;
   border: #333333 solid 2px;
   border-radius: 5px;
 }
