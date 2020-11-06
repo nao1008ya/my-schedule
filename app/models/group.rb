@@ -4,5 +4,6 @@ class Group < ApplicationRecord
 
   # アソシエーションを設定
   has_many :events
-  # has_many :users, through: :group_users
+  has_many :group_users
+  has_many :users, through: :group_users
 end
