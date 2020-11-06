@@ -128,3 +128,7 @@
   font-size: 12px;
   padding: 2px 4px;
 }
+.field-start select {
+  width: 7vw;
+  height: 5vh;
+}

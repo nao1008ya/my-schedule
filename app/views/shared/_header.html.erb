@@ -7,8 +7,8 @@
   <div class='nav'>
     <ul class='lists'>
       <% if user_signed_in? %>
-        <li><%= link_to 'グループ一覧', "#", class: :header__list %></li>
-        <li><%= link_to 'グループ作成', "#", class: :header__list %></li>
+        <li><%= link_to 'グループ一覧', groups_path, class: :header__list %></li>
+        <li><%= link_to 'グループ作成', new_group_path, class: :header__list %></li>
         <li><%= link_to 'イベント追加', new_event_path, class: :header__list %></li>
         <li><%= link_to current_user.name, edit_user_path(current_user), class: :header__list %></li>
         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: :header__list %></li>
