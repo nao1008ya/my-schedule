@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
   def index
-    
+    @groups = Group.order('created_at DESC')
   end
   
   def new
@@ -10,7 +10,7 @@ class GroupsController < ApplicationController
   def create
     @group = Group.new(group_params)
     if @group.save
-      redirect_to :index
+      redirect_to root_path
     else
       render :new
     end

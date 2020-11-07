@@ -1,1 +1,28 @@
-<h1>グループ一覧ページ</h1>
+<%= render "shared/header" %>
+
+<div class="event__wrapper">
+    <div class="event__body">
+      <div class="event__detail">
+        <p class="detail__title">ユーザー名</p>
+        <h2 class="detail__message">
+          <%= current_user.name %>
+        </h2>
+      </div>
+    </div>
+    <div class="event__body">
+      <div class="event__detail">
+        <p class="detail__title">グループ一覧</p>
+        <p class="detail__message">
+          <% @groups.each do |group| %>
+            <%= link_to group.name, group_path(group.id), class: 'group_name' %>
+          <% end %>
+        </p>
+      </div>
+      <p class='detail__message_option'>※グループのスケジュール一覧にアクセスします</p>
+      <div class="event__detail">
+        <%= link_to "スケジュールに戻る", root_path, class: 'group-create-form__action-btn-index'%>
+      </div>
+    </div>
+</div>
+
+  <%= render "shared/footer" %>

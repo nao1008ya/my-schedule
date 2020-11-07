@@ -16,20 +16,24 @@
         <label class='group-create-form__label' for='group_create_チャットメンバー'>グループメンバー</label>
       </div>
       <div class='group-create-form__field--right'>
-        <select name="group[user_ids][]">
-          <option value="">グループに追加するユーザーを選択してください</option>
+        <h5>グループに追加するユーザーを選択してください</h5>
+        <p>(comandを押しながら入力することで複数名選択できます)</p>
+        <%= javascript_pack_tag 'test' %>
+        <select name="group[user_ids][]" id='user' multiple>
           <% User.where.not(id: current_user.id).each do |user| %>
             <option value=<%= user.id %>><%= user.name %></option>
           <% end %>
         </select>
         <input name="group[user_ids][]" type="hidden" value=<%= current_user.id %>>
       </div>
+      <div id="list">
+      </div>
     </div>
     <div class='group-create-form__field'>
       <div class='cgroup-create-form__field--left'></div>
       <div class='group-create-form__field--right'>
+        <%= link_to "スケジュールに戻る", root_path, class: 'group-create-form__action-btn'%>
         <%= f.submit "登録", class: 'group-create-form__registration-btn'%>
-        <%= f.submit "追加", class: 'group-create-form__action-btn'%>
       </div>
     </div>
   <% end %>
