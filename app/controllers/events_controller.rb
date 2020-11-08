@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+  before_action :authenticate_user!, except: [:index]
   before_action :set_event, only: [:show, :edit, :update, :destroy]
   def index
     @events = Event.all
@@ -8,14 +9,18 @@ class EventsController < ApplicationController
     @event = Event.new
   end
   def create
-    Event.create(event_params)
-    redirect_to root_path
+    if Event.create(event_params)
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   def show
   end
 
   def edit
+    redirect_to action: :index unless @event.user.id == current_user.id
   end
   def update
     if @event.update(event_params)
@@ -30,7 +35,7 @@ class EventsController < ApplicationController
       @event.destroy
       redirect_to root_path
     else
-      redirect_to action: :index
+      redirect_to root_path
     end
   end
 
