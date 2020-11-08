@@ -137,3 +137,12 @@ h1 {
   color: #fff;
   background-color: #ccc;
 }
+.group-user-user-name {
+  width: 100%;
+  padding: 2vh 1vw;
+  display: flex;
+  flex-direction: column;
+  border: #333333 solid 2px;
+  border-radius: 5px;
+  margin-top: 10px;
+}

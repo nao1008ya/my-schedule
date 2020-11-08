@@ -1,0 +1,24 @@
+<header class='top-page-header'>
+  <div class='top-page-contents'>
+    <%= link_to image_tag("schedule.png", class:"schedule-icon"), "/" %>
+    <h1 class='schedule-name'><%= @group.name %></h1>
+  </div>
+  <div class='nav'>
+    <ul class='lists'>
+        <li><%= link_to 'グループ一覧', groups_path, class: :event__btn %></li>
+        <li><%= link_to "編集する", edit_group_path(@group.id), class: :event__btn %></li>
+        <li><%= link_to "削除する", group_path(@group.id), method: :delete, class: :event__btn %></li>
+        <li><%= link_to "スケジュールに戻る", root_path, class: :event__btn %></li>
+    </ul>
+  </div>
+</header>
+
+<% @group.group_users.each do |group_user| %>
+  <h2 class="group-user-user-name">ユーザー名：<%= group_user.user.name %></h2>
+  <%= week_calendar number_of_weeks: 2, events: group_user.user.events do |date, events| %>
+    <%= date.day %>
+    <% events.each do |event| %>
+      <%= link_to event.title, event_path(event.id), class: :schedule__title %>
+    <% end %>
+  <% end %>
+<% end %>
