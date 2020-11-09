@@ -11,6 +11,12 @@ https://my-schedule-31053.herokuapp.com/
 Email:test@gmail.com
 Password:test0000
 
+# Basic認証
+ID/Pass
+ID: admin
+Pass: 2222
+
+
 # 利用方法
 自身のスケジュールの管理をしつつ、登録しているユーザーでグループを作成し、
 グループメンバーのスケジュールを確認することができる。
