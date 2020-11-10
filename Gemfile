@@ -63,3 +63,5 @@ gem 'simple_calendar', '~> 2.0'
 gem 'devise'
 # binding.pryなどのテスト実行の為
 gem 'pry-rails'
+# 日本語に対応する"rails-i18n"というGemを導入
+gem 'rails-i18n'

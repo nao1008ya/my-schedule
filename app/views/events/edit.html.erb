@@ -7,6 +7,7 @@
     </div>
     <div class='schedule-page__inner--right form'>
       <%= form_with(model: @event, local: true) do |f| %>
+      <%= render 'layouts/error_messages', model: f.object %>
         <div class='field'>
           <div class='field-label'>
             <%= f.label 'タイトル'%>
