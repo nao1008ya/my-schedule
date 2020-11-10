@@ -21,13 +21,13 @@ RSpec.describe Event, type: :model do
       it 'titleがない場合は登録できないこと' do
         @event.title = nil
         @event.valid?
-        expect(@event.errors.full_messages).to include("Title can't be blank")
+        expect(@event.errors.full_messages).to include("タイトルを入力してください")
       end
 
       it 'start_timeがない場合は登録できないこと' do
         @event.start_time = nil
         @event.valid?
-        expect(@event.errors.full_messages).to include("Start time can't be blank")
+        expect(@event.errors.full_messages).to include("スタート時刻を入力してください")
       end
 
     end

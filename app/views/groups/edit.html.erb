@@ -2,6 +2,9 @@
   <h1>グループ編集</h1>
   <%=form_with model: @group, local: true do |f|%>
     <div class='group-create-form__field'>
+      <div class='group-error-message'>
+        <%= render 'layouts/error_messages', model: f.object %>
+      </div>
       <div class='group-create-form__field--left'>
         <%= f.label :グループ名, class: 'group-create-form__label'%>
       </div>

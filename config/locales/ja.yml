@@ -1,0 +1,10 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        name: 名前
+      event:
+        title: タイトル
+        start_time: スタート時刻
+      group:
+        name: グループ名

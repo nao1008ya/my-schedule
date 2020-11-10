@@ -16,7 +16,7 @@ RSpec.describe Group, type: :model do
       it '名前がない場合は登録できないこと' do
         @group.name = nil
         @group.valid?
-        expect(@group.errors.full_messages).to include("Name can't be blank")
+        expect(@group.errors.full_messages).to include("グループ名を入力してください")
       end
 
     end
