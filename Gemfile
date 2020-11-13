@@ -65,3 +65,5 @@ gem 'devise'
 gem 'pry-rails'
 # 日本語に対応する"rails-i18n"というGemを導入
 gem 'rails-i18n'
+# リンクを設置したリストを画面に表示する機能を実装
+gem "gretel"
