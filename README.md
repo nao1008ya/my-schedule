@@ -59,8 +59,8 @@ ID: admin、Pass: 2222
 rails _6.0.0_
 
 # データベース設計
-![ER図](https://gyazo.com/c58d9cd93a494718788333a2761d922e)
-https://gyazo.com/c58d9cd93a494718788333a2761d922e
+<img width="590" alt="ER図" src="https://user-images.githubusercontent.com/72249406/99138622-4aa09880-2675-11eb-987c-202be8c68548.png">
+
 
 
 
