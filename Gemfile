@@ -67,3 +67,6 @@ gem 'pry-rails'
 gem 'rails-i18n'
 # リンクを設置したリストを画面に表示する機能を実装
 gem "gretel"
+# SNS認証のGemをインストール
+gem 'omniauth-google-oauth2'
+gem "omniauth-rails_csrf_protection"

@@ -3,6 +3,7 @@
     <div class='account-page__inner--left account-page__header'>
       <h2>ユーザーサインイン</h2>
       <h5>すでに登録されている方のページです。</h5>
+      <%= link_to "Googleアカウントでログイン", user_google_oauth2_omniauth_authorize_path, method: :post, class: 'btn'%>
     </div>
     <div class='account-page__inner--right user-form'>
       <%= form_with model: resource, as: resource_name, url: session_path(resource_name), local: true do |f|%>
