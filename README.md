@@ -51,6 +51,7 @@ ID: admin、Pass: 2222
 ・simple calendar Gemを用いた際にviewファイルへの表示やCSSの編集
 ・errorメッセージの日本語表記の為にrails-i18n Gem
 ・パンクず機能の実装の為にgretel Gem
+・外部APIの設定(SNSアカウント認証)(google)
 
 # 実装予定の機能
 グループ間でのチャット機能
