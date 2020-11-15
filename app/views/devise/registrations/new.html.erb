@@ -5,6 +5,7 @@
       <h5>スケジュール管理帳の会員登録ページです。
       <br>自身、グループのスケジュール確認が行えます。
       <br>是非この機会にご登録下さい。</h5>
+      <%= link_to "Googleアカウントで登録", user_google_oauth2_omniauth_authorize_path, method: :post, class: 'btn'%>
     </div>
     <div class='account-page__inner--right user-form'>
       <%= form_with model: resource, as: resource_name, url: registration_path(resource_name), local: true do |f|%>
@@ -27,25 +28,29 @@
             <%= f.email_field :email%>
           </div>
         </div>
-        <div class='field'>
-          <div class='field-label'>
-            <%= f.label 'パスワード'%>
-            <i>(英数字6文字以上)</i>
-            <span class="indispensable">必須</span>
+        <%if @sns_id.present? %>
+          <%= hidden_field_tag :sns_auth, true %>
+        <% else %>
+          <div class='field'>
+            <div class='field-label'>
+              <%= f.label 'パスワード'%>
+              <i>(英数字6文字以上)</i>
+              <span class="indispensable">必須</span>
+            </div>
+            <div class='field-input'>
+              <%= f.password_field :password, autocomplete: "off"%>
+            </div>
           </div>
-          <div class='field-input'>
-            <%= f.password_field :password, autocomplete: "off"%>
+          <div class='field'>
+            <div class='field-label'>
+              <%= f.label 'パスワード（確認用）'%>
+              <span class="indispensable">必須</span>
+            </div>
+            <div class='field-input'>
+              <%= f.password_field :password_confirmation, autocomplete: "off"%>
+            </div>
           </div>
-        </div>
-        <div class='field'>
-          <div class='field-label'>
-            <%= f.label 'パスワード（確認用）'%>
-            <span class="indispensable">必須</span>
-          </div>
-          <div class='field-input'>
-            <%= f.password_field :password_confirmation, autocomplete: "off"%>
-          </div>
-        </div>
+        <% end %>
         <div class='actions'>
           <%= f.submit "新規登録", class: 'btn'%>
         </div>
