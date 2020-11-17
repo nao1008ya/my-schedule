@@ -41,13 +41,20 @@ ID: admin、Pass: 2222
 # DEMO
 
 ## トップページ
+![イベント登録](https://user-images.githubusercontent.com/72249406/99342341-027cb280-28cf-11eb-8e9f-4f49f82e465c.gif)
+イベントを登録することでスケジュール帳で確認ができます。(カレンダーへはイベントのタイトル名のみ表示されます。)カレンダーのイベントをクリックすると詳細ページへ推移します。詳細ページでは編集、削除などが可能です。なお、ユーザーのイベント情報しか表示されないようになっています。
 
 ## 新規登録画面
 ![新規登録画面](https://user-images.githubusercontent.com/72249406/99337839-6a7acb00-28c6-11eb-97c2-87dbc254ab1f.gif)
+![googleアカウントで新規登録](https://user-images.githubusercontent.com/72249406/99340204-e840d580-28ca-11eb-94d7-691b0f7d9b21.gif)
 <img width="1077" alt="新規アカウント登録エラーメッセージ" src="https://user-images.githubusercontent.com/72249406/99339736-0823c980-28ca-11eb-9bb6-2526fcd07060.png">
-名前、メールアドレス、パスワードを入力することでユーザーの登録をすることができます。入力時にエラーが発生した場合は日本語でエラーメッセージが表示されます。
+名前、メールアドレス、パスワードを入力することでユーザーの登録をすることができます。googleアカウント外部API(SNSアカウント認証)にて登録することも可能です。入力時にエラーが発生した場合は日本語でエラーメッセージが表示されます。
 
-
+## グループ機能
+![グループ作成](https://user-images.githubusercontent.com/72249406/99343091-8c794b00-28d0-11eb-9ff7-26f9483f0564.gif)
+![グループ一覧](https://user-images.githubusercontent.com/72249406/99343431-39ec5e80-28d1-11eb-87a7-9d74e870abe2.gif)
+![グループ詳細](https://user-images.githubusercontent.com/72249406/99343648-a49d9a00-28d1-11eb-9d4c-0e2a7ddb49e0.gif)
+グループ機能を用いることでグループのユーザーのスケジュールを確認することが可能となります。また、グループ編集、削除機能も実装しています。ページ推移に応じてのパンくず機能も実装しています。
 
 # 工夫した機能
 ・simple calendar Gemを用いた際にviewファイルへの表示やCSSの編集しました。
