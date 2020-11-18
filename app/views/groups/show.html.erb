@@ -6,6 +6,7 @@
   </div>
   <div class='nav'>
     <ul class='lists'>
+        <li><%= link_to 'チャットルーム', group_chats_path(@group.id), class: :event__btn %></li>
         <li><%= link_to 'グループ一覧', groups_path, class: :event__btn %></li>
         <li><%= link_to "編集する", edit_group_path(@group.id), class: :event__btn %></li>
         <li><%= link_to "削除する", group_path(@group.id), method: :delete, class: :event__btn %></li>
