@@ -1,50 +1,61 @@
 <body>
-    <div id="your_container">
-
-        <!-- チャットの外側部分① -->
-        <div id="bms_messages_container">
-            <!-- ヘッダー部分② -->
-            <div id="bms_chat_header">
-                <!--ステータス-->
-                <div id="bms_chat_user_status">
-                    <!--ステータスアイコン-->
-                    <div id="bms_status_icon">●</div>
-                    <!--ユーザー名-->
-                    <div id="bms_chat_user_name">ユーザー</div>
-                </div>
-            </div>
-
-            <!-- タイムライン部分③ -->
-            <div id="bms_messages">
-
-                <!--メッセージ１（左側）-->
-                <div class="bms_message bms_left">
-                    <div class="bms_message_box">
-                        <div class="bms_message_content">
-                            <div class="bms_message_text">ほうほうこりゃー便利じゃないか</div>
-                        </div>
-                    </div>
-                    <div class="bms_message_name_left">name</div>
-                </div>
-                <div class="bms_clear"></div><!-- 回り込みを解除（スタイルはcssで充てる） -->
-
-                <!--メッセージ２（右側）-->
-                <div class="bms_message bms_right">
-                    <div class="bms_message_box">
-                        <div class="bms_message_content">
-                            <div class="bms_message_text">うん、まあまあいけとるな</div>
-                        </div>
-                    </div>
-                    <div class="bms_message_name_right">name</div>
-                </div>
-                <div class="bms_clear"></div><!-- 回り込みを解除（スタイルはcssで充てる） -->
-            </div>
-
-            <!-- テキストボックス、送信ボタン④ -->
-            <div id="bms_send">
-                <textarea id="bms_send_message"></textarea>
-                <div id="bms_send_btn">送信</div>
-            </div>
+<%= form_with model: [@group, @chat], class: 'form', local: true do |f| %>
+  <div id="your_container">
+    <!-- チャットの外側部分① -->
+    <div id="bms_messages_container">
+      <!-- ヘッダー部分② -->
+      <div id="bms_chat_header">
+        <!--ステータス-->
+        <div id="bms_chat_user_status">
+          <!--ステータスアイコン-->
+          <div id="bms_status_icon">●</div>
+            <!--ユーザー名-->
+          <div id="bms_chat_user_name"><%= @group.name %></div>
         </div>
+      </div>
+
+      <!-- タイムライン部分③ -->
+      <div id="bms_messages">
+
+        <% @chat%>
+        <% if @chat.user == current_user %>
+          <!--メッセージ２（右側）-->
+          <div class="bms_message bms_right">
+            <div class="bms_message_box">
+              <div class="bms_message_content">
+                <div class="bms_message_text"><%= @chat.text %></div>
+              </div>
+             </div>
+            <div class="bms_message_name_right">name</div>
+          </div>
+          <div class="bms_clear"></div><!-- 回り込みを解除（スタイルはcssで充てる） -->
+        <% else %>
+          <!--メッセージ１（左側）-->
+          <div class="bms_message bms_left">
+            <div class="bms_message_box">
+              <div class="bms_message_content">
+                <div class="bms_message_text"><%= @chat.text %></div>
+              </div>
+            </div>
+            <div class="bms_message_name_left">name</div>
+          </div>
+          <div class="bms_clear"></div><!-- 回り込みを解除（スタイルはcssで充てる） -->
+        <% end %>
+
+      </div>
+
+      <!-- テキストボックス、送信ボタン④ -->
+      <div class="form-input-area">
+      <div class="form-input">
+        <%= f.text_field :text, class: 'form-message', placeholder: 'メッセージを入力して下さい' %>
+        <label class="form-image">
+          <span class="image-file">画像</span>
+          <%= f.file_field :image, class: 'hidden' %>
+        </label>
+      </div>
+      <%= f.submit '送信', class: 'form-submit' %>
+      </div>
     </div>
+  </div>
+<% end %>
 </body>
