@@ -10,36 +10,43 @@
           <!--ステータスアイコン-->
           <div id="bms_status_icon">●</div>
             <!--ユーザー名-->
-          <div id="bms_chat_user_name"><%= @group.name %></div>
+            <div id="bms_chat_user_name"><%= @group.name %></div>
+            <ul class='lists'>
+              <li><%= link_to 'グループ一覧', groups_path, class: :event__btn %></li>
+              <li><%= link_to "スケジュールに戻る", root_path, class: :event__btn %></li>
+            </ul>
         </div>
       </div>
 
       <!-- タイムライン部分③ -->
       <div id="bms_messages">
 
-        <% @chat%>
-        <% if @chat.user == current_user %>
-          <!--メッセージ２（右側）-->
-          <div class="bms_message bms_right">
-            <div class="bms_message_box">
-              <div class="bms_message_content">
-                <div class="bms_message_text"><%= @chat.text %></div>
-              </div>
-             </div>
-            <div class="bms_message_name_right">name</div>
-          </div>
-          <div class="bms_clear"></div><!-- 回り込みを解除（スタイルはcssで充てる） -->
-        <% else %>
-          <!--メッセージ１（左側）-->
-          <div class="bms_message bms_left">
-            <div class="bms_message_box">
-              <div class="bms_message_content">
-                <div class="bms_message_text"><%= @chat.text %></div>
-              </div>
+        <% @chats.each do |chat| %>
+          <% if chat.user == current_user %>
+            <!--メッセージ２（右側）-->
+            <div class="bms_message bms_right">
+              <div class="bms_message_box">
+                <div class="bms_message_content">
+                  <div class="bms_message_text"><%= chat.text %></div>
+                </div>
+               </div>
+              <div class="bms_message_name_right"><%= chat.user.name %></div>
+              <div class="bms_message_name_right"><%= chat.updated_at.strftime("%H:%M") %></div>
             </div>
-            <div class="bms_message_name_left">name</div>
-          </div>
-          <div class="bms_clear"></div><!-- 回り込みを解除（スタイルはcssで充てる） -->
+            <div class="bms_clear"></div><!-- 回り込みを解除（スタイルはcssで充てる） -->
+          <% else %>
+            <!--メッセージ１（左側）-->
+            <div class="bms_message bms_left">
+              <div class="bms_message_box">
+                <div class="bms_message_content">
+                  <div class="bms_message_text"><%= chat.text %></div>
+                </div>
+              </div>
+              <div class="bms_message_name_left"><%= chat.user.name %></div>
+              <div class="bms_message_name_right"><%= chat.updated_at.strftime("%H:%M") %></div>
+            </div>
+            <div class="bms_clear"></div><!-- 回り込みを解除（スタイルはcssで充てる） -->
+          <% end %>
         <% end %>
 
       </div>
@@ -48,10 +55,6 @@
       <div class="form-input-area">
       <div class="form-input">
         <%= f.text_field :text, class: 'form-message', placeholder: 'メッセージを入力して下さい' %>
-        <label class="form-image">
-          <span class="image-file">画像</span>
-          <%= f.file_field :image, class: 'hidden' %>
-        </label>
       </div>
       <%= f.submit '送信', class: 'form-submit' %>
       </div>

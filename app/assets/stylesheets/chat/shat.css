@@ -50,7 +50,7 @@
   border-right: 1px solid #ddd;
   border-left: 1px solid #ddd;
   background-color: #eee;
-  margin: 50px 0px 60px 0px;
+  margin: 50px 0px 90px 0px;
   box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2) inset;/*ヘッダーの下に影を入れる*/
 }
   /* メッセージ全般のスタイル */
@@ -155,20 +155,6 @@
   font-size: 16px;
   color: white;
   border: none;
-}
-
-.form-image {
-  font-size: 12px;
-  background-color: lightblue;
-  color: white;
-  padding: 12px;
-  width: 60px;
-  margin: 5px 10px;
-  text-align: center;
-}
-
-.hidden {
-  display: none;
 }
 
 .form-input-area {

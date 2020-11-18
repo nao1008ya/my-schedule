@@ -2,6 +2,7 @@ class ChatsController < ApplicationController
   def index
     @chat = Chat.new
     @group = Group.find(params[:group_id])
+    @chats = @group.chats.includes(:user)
   end
 
   def create
@@ -10,6 +11,7 @@ class ChatsController < ApplicationController
     if @chat.save
       redirect_to group_chats_path(@group)
     else
+      @chats = @group.chats.includes(:user)
       render :index
     end
   end
