@@ -9,10 +9,7 @@ class ChatsController < ApplicationController
     @group = Group.find(params[:group_id])
     @chat = @group.chats.new(chat_params)
     if @chat.save
-      redirect_to group_chats_path(@group)
-    else
-      @chats = @group.chats.includes(:user)
-      render :index
+      ActionCable.server.broadcast 'chat_channel', {chat: @chat, user: @chat.user, time: @chat.updated_at.strftime("%H:%M"), current: current_user.id, group: @chat.group}
     end
   end
 
