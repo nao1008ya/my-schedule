@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   root to: 'events#index'
   resources :events
   resources :users, only: [:edit, :update]
-  resources :groups
+  resources :groups do
+    resources :chats, only: [:index, :create]
+  end
 end

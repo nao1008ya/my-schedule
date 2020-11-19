@@ -156,3 +156,16 @@ VSCode
 
 - belongs_to :user
 - belongs_to :group
+
+## chat テーブル
+
+| Column | Type       | Options                        |
+| ------ | ---------- | ------------------------------ |
+| text   | string     |                                |
+| user   | references | null: false, foreign_key: true |
+| room   | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :group
+- belongs_to :user
