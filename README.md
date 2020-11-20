@@ -13,6 +13,9 @@ my-schedule
 グループ内ではチャット機能を使用してトークを行うことができます。
 
 # URL
+## AWS
+18.178.157.42
+## Heroku
 https://my-schedule-31053.herokuapp.com/
 
 # テスト用アカウント
