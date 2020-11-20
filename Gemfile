@@ -70,3 +70,10 @@ gem "gretel"
 # SNS認証のGemをインストール
 gem 'omniauth-google-oauth2'
 gem "omniauth-rails_csrf_protection"
+
+group :production do
+  # Heroku設定
+  # gem ‘rails_12factor’
+  # AWS設定
+  gem 'unicorn', '5.4.1'
+end
