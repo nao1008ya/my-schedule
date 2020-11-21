@@ -62,6 +62,12 @@ ID: admin、Pass: 2222
 ![グループ詳細](https://user-images.githubusercontent.com/72249406/99343648-a49d9a00-28d1-11eb-9d4c-0e2a7ddb49e0.gif)
 グループ機能を用いることでグループのユーザーのスケジュールを確認することが可能となります。また、グループ編集、削除機能も実装しています。ページ推移に応じてのパンくず機能も実装しています。
 
+## チャット機能
+![チャット機能１](https://user-images.githubusercontent.com/72249406/99872217-93cb8c00-2c23-11eb-874b-0f857103ebd9.gif)
+![チャット機能２](https://user-images.githubusercontent.com/72249406/99872221-9928d680-2c23-11eb-8df9-96f1cbe4b572.gif)
+![チャット機能３](https://user-images.githubusercontent.com/72249406/99872225-9c23c700-2c23-11eb-9862-837bad536649.gif)
+グループ間でつけジュールの調整のための、チャット機能を実装致しました。JavaScriptを用いて実装したので、非同期通信です。投稿したユーザーへは右側へ表示、他のユーザーの投稿は左側に表示、グループが違う場合は表示されないようになっています。投稿者、時間も表示してあります。
+
 # 工夫した機能
 ・simple calendar Gemを用いた際にviewファイルへの表示やCSSの編集しました。
 ・errorメッセージの日本語表記の為にrails-i18n Gemを導入しました。
