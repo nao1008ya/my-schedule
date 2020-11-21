@@ -14,7 +14,7 @@ my-schedule
 
 # URL
 ## AWS
-18.178.157.42
+http://18.178.157.42/
 ## Heroku
 https://my-schedule-31053.herokuapp.com/
 
