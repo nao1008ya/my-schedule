@@ -114,7 +114,7 @@ VSCode
 チャット機能実装面でも、画像の投稿機能や、グループ内のユーザー個別のトーク機能の実装も課題でございます。
 
 # データベース設計
-<img width="590" alt="ER図" src="https://user-images.githubusercontent.com/72249406/99138622-4aa09880-2675-11eb-987c-202be8c68548.png">
+<img width="658" alt="ER図" src="https://user-images.githubusercontent.com/72249406/99891511-cb7f1600-2cad-11eb-81e2-98894ddd73e4.png">
 
 # テーブル設計
 ## usersテーブル
