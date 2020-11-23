@@ -90,12 +90,13 @@ HTML/CSS, Java Script
 MySQL,SequelPro
 
 ## インフラ
-Heroku
+AWS(EC2), Capistrano, Docker(開発環境)
 
 ## Webサーバー(本番環境)
-Heroku
+nginx
 
 ## アプリケーションサーバー
+unicorn
 
 ## ソース管理
 GitHub,GitHubDesktop
