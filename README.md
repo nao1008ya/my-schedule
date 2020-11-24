@@ -19,10 +19,12 @@ http://18.178.157.42/
 https://my-schedule-31053.herokuapp.com/
 
 # テスト用アカウント
-Email:test@gmail.com、Password:test0000
+Email:test@gmail.com
+  Password:test0000
 
 # Basic認証
-ID: admin、Pass: 2222
+ID: admin
+  Pass: 2222
 
 # ペルソナ
 複数店舗を経営している経営者、店舗責任者、従業員
@@ -40,9 +42,9 @@ ID: admin、Pass: 2222
 
 ## 洗い出した用件
 ・ユーザー機能：登録、編集
-・イベント機能（simple Calendarを用いたスケジュール機能）：登録、編集、削除
-・グループ機能：登録、編集、削除
-・チャット機能：送信、受信
+  ・イベント機能（simple Calendarを用いたスケジュール機能）：登録、編集、削除
+  ・グループ機能：登録、編集、削除
+  ・チャット機能：送信、受信
 
 # DEMO
 
@@ -70,10 +72,10 @@ ID: admin、Pass: 2222
 
 # 工夫した機能
 ・simple calendar Gemを用いた際にviewファイルへの表示やCSSの編集しました。
-・errorメッセージの日本語表記の為にrails-i18n Gemを導入しました。
-・パンクず機能の実装の為にgretel Gemを導入しました。
-・外部APIの設定(SNSアカウント認証)(google)の設定をしました。
-・Java Scriptを用いてグループ間でのチャット機能を実装しました。
+  ・errorメッセージの日本語表記の為にrails-i18n Gemを導入しました。
+  ・パンクず機能の実装の為にgretel Gemを導入しました。
+  ・外部APIの設定(SNSアカウント認証)(google)の設定をしました。
+  ・Java Scriptを用いてグループ間でのチャット機能を実装しました。
 
 # ローカルでの動作方法
 rails _6.0.0_
