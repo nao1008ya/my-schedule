@@ -21,14 +21,11 @@
       </div>
       <div class='group-create-form__field--right'>
         <h5>グループに追加するユーザーを選択してください</h5>
-        <p>(comandを押しながら入力することで複数名選択できます)</p>
-        <%= javascript_pack_tag 'test' %>
-        <select name="group[user_ids][]" id='user' multiple>
-          <% User.where.not(id: current_user.id).each do |user| %>
-            <option value=<%= user.id %>><%= user.name %></option>
-          <% end %>
-        </select>
-        <input name="group[user_ids][]" type="hidden" value=<%= current_user.id %>>
+        <ul class="choice__lists" >
+              <div class="choice__list">
+                <%= f.collection_check_boxes :user_ids, User.where.not(id: current_user.id), :id, :name %>
+              </div>
+          </ul>
       </div>
       <div id="list">
       </div>
