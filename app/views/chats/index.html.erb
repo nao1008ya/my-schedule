@@ -12,8 +12,7 @@
             <!--ユーザー名-->
             <div id="bms_chat_user_name"><%= @group.name %></div>
             <ul class='lists'>
-              <li><%= link_to 'グループ一覧', groups_path, class: :event__btn %></li>
-              <li><%= link_to "スケジュールに戻る", root_path, class: :event__btn %></li>
+              <li><%= link_to 'グループ一覧', groups_path, class: :event_chat_btn %></li>
               <li class="hidden" id="current_user_id"><%= current_user.id %></div>
               <li class="hidden" id="current_group_id"><%= @group.id %></div>
             </ul>

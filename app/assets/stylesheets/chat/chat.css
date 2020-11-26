@@ -168,3 +168,9 @@
 .hidden {
   display: none;
 }
+
+.event_chat_btn {
+  border: #333333 solid 1px;
+  padding: 3px;
+  
+}
