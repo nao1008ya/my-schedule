@@ -10,7 +10,7 @@
           <!--ステータスアイコン-->
           <div id="bms_status_icon">●</div>
             <!--ユーザー名-->
-            <div id="bms_chat_user_name"><%= @group.name %></div>
+            <div id="bms_chat_user_name"><%= link_to @group.name, group_path(@group.id) %></div>
             <ul class='lists'>
               <li><%= link_to 'グループ一覧', groups_path, class: :event_chat_btn %></li>
               <li class="hidden" id="current_user_id"><%= current_user.id %></div>
