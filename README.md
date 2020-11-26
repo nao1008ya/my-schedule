@@ -73,7 +73,7 @@ https://my-schedule-31053.herokuapp.com/
 # 工夫した機能
  - simple calendar Gemを用いた際にviewファイルへの表示やCSSの編集しました。 
  - errorメッセージの日本語表記の為にrails-i18n Gemを導入しました。
- - パンクず機能の実装の為にgretel Gemを導入しました。
+ - パンくず機能の実装の為にgretel Gemを導入しました。
  - 外部APIの設定(SNSアカウント認証)(google)の設定をしました。
  - Java Scriptを用いてグループ間でのチャット機能を実装しました。
 
@@ -115,6 +115,10 @@ VSCode
 その為、シンプルに拘って作成しましたが、グループ間のスケジュール表示では
 まとめて表示されず、各ユーザーのスケジュール画面が別々に表示されてしまいました。
 チャット機能実装面でも、画像の投稿機能や、グループ内のユーザー個別のトーク機能の実装も課題でございます。
+
+# 画面推移図
+<img width="1115" alt="画面推移図" src="https://user-images.githubusercontent.com/72249406/100306379-a0b2fb80-2fe6-11eb-84d5-060dd1ec53ec.png">
+
 
 # データベース設計
 <img width="719" alt="ER図" src="https://user-images.githubusercontent.com/72249406/100042298-847c5680-2e4e-11eb-9061-54ee5bd11a1f.png">
