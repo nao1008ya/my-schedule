@@ -59,7 +59,8 @@ https://my-schedule-31053.herokuapp.com/
 名前、メールアドレス、パスワードを入力することでユーザーの登録をすることができます。googleアカウント外部API(SNSアカウント認証)にて登録することも可能です。入力時にエラーが発生した場合は日本語でエラーメッセージが表示されます。
 
 ## グループ機能
-![グループ作成](https://user-images.githubusercontent.com/72249406/99343091-8c794b00-28d0-11eb-9ff7-26f9483f0564.gif)
+![グループ作成](https://user-images.githubusercontent.com/72249406/100418712-92d4a780-30c6-11eb-9d1e-2c34131a0e97.gif)
+![グループ編集](https://user-images.githubusercontent.com/72249406/100418692-8e0ff380-30c6-11eb-84e1-24e3a44353a2.gif)
 ![グループ一覧](https://user-images.githubusercontent.com/72249406/99343431-39ec5e80-28d1-11eb-87a7-9d74e870abe2.gif)
 ![グループ詳細](https://user-images.githubusercontent.com/72249406/99343648-a49d9a00-28d1-11eb-9d4c-0e2a7ddb49e0.gif)
 グループ機能を用いることでグループのユーザーのスケジュールを確認することが可能となります。また、グループ編集、削除機能も実装しています。ページ推移に応じてのパンくず機能も実装しています。
@@ -68,7 +69,7 @@ https://my-schedule-31053.herokuapp.com/
 ![チャット機能１](https://user-images.githubusercontent.com/72249406/99872217-93cb8c00-2c23-11eb-874b-0f857103ebd9.gif)
 ![チャット機能２](https://user-images.githubusercontent.com/72249406/99872221-9928d680-2c23-11eb-8df9-96f1cbe4b572.gif)
 ![チャット機能３](https://user-images.githubusercontent.com/72249406/99872225-9c23c700-2c23-11eb-9862-837bad536649.gif)
-グループ間でつけジュールの調整のための、チャット機能を実装致しました。JavaScriptを用いて実装したので、非同期通信です。投稿したユーザーへは右側へ表示、他のユーザーの投稿は左側に表示、グループが違う場合は表示されないようになっています。投稿者、時間も表示してあります。
+グループ間でつけジュールの調整のための、チャット機能を実装致しました。JavaScriptを用いて実装したので、非同期通信です。投稿したユーザーへは右側へ表示、他のユーザーの投稿は左側に表示、グループが違う場合は表示されないようになっています。投稿者、時間も表示してあります。現時点ではAWS展開時にJavaScriptにてエラーが発生している為、問題なく実装できるようになることが改善点です。
 
 # 工夫した機能
  - simple calendar Gemを用いた際にviewファイルへの表示やCSSの編集しました。 
