@@ -61,7 +61,6 @@ https://my-schedule-31053.herokuapp.com/
 ## グループ機能
 ![グループ作成](https://user-images.githubusercontent.com/72249406/100418712-92d4a780-30c6-11eb-9d1e-2c34131a0e97.gif)
 ![グループ編集](https://user-images.githubusercontent.com/72249406/100418692-8e0ff380-30c6-11eb-84e1-24e3a44353a2.gif)
-![グループ一覧](https://user-images.githubusercontent.com/72249406/99343431-39ec5e80-28d1-11eb-87a7-9d74e870abe2.gif)
 ![グループ詳細](https://user-images.githubusercontent.com/72249406/99343648-a49d9a00-28d1-11eb-9d4c-0e2a7ddb49e0.gif)
 グループ機能を用いることでグループのユーザーのスケジュールを確認することが可能となります。また、グループ編集、削除機能も実装しています。ページ推移に応じてのパンくず機能も実装しています。
 
