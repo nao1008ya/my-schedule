@@ -79,7 +79,7 @@ https://my-schedule-31053.herokuapp.com/
 
 # ローカルでの動作方法
 rails _6.0.0_
-ruby 2.6.5
+Ruby 2.6.5
 
 # 使用技術(開発環境)
 
